@@ -7,45 +7,72 @@ import java.sql.Statement;
 import java.sql.SQLException;
 
 
+
 public class databaseConn {
 
-	// A class to connect to database , used for  login
-	public static void main(String args[]) {
+		private final String DRIVER_NAME = "com.mysql.cj.jdbc.Driver";
+		private final String IP = "localhost:3306";	
+		private final String DATATABASE = "admin";
+		private final String USERNAME = "root";
+		private final String PASSWORD = "admin";
+	
+		private Connection connection;
 		
-		databaseConn test = new databaseConn();
-		test.getConnection();
+		
+		public static databaseConn getConnection() {
+			return new databaseConn();
+			
+		}
+		
+		
+		private databaseConn() {
+			
+		 	this.connection = this.innitConnection();
+		
+		}
+		
+		private Connection innitConnection() {
+			
+			try {
+				Class.forName(DRIVER_NAME);	
+				
+				// "jdbc:mysql://{ip}/{database}" , {username}, {Password}
+				return DriverManager.getConnection("jdbc:mysql://localhost:3306/admin", "root", "admin");
+				
+				
+				
+			}
+			catch (Exception e) {}
+			System.out.println("Connetion failed...");
+			return null;
+		}
+	
+	public void executeQuery(String query) {
+		try {
+			Statement statement = this.connection.createStatement();
+			//statement.execute(query);
+			
+			ResultSet Results = statement.executeQuery(query);
+			
+			while(Results.next()) {
+				System.out.println("ID" + Results.getInt("idUserAccount"));
+				System.out.println("Emri: " + Results.getString("firstName"));
+			}
+		}
+		catch(Exception e) {
+			System.out.println(e.getMessage());
+		}
+	}	
+	
+	public static void main(String args[]) {
+		databaseConn connection = new databaseConn();
+		String query = "Select * From userAccount";
+		connection.executeQuery(query);
 	}
-
-	    public  Connection databaseLink;
-
-	    public  Connection getConnection() {
-	        String databaseName = "admin";
-	        String databaseUser = "root";
-	        String databasePassword = "";
-	        String url = "jdbc:mysql://localhost/" + databaseName;
-	        
-	        String query = "Select * from userAccount";
-
-	        try {
-	            Class.forName("com.mysql.cj.jdbc.Driver");   
-	            databaseLink = DriverManager.getConnection(url, databaseUser, databasePassword);
-		        Statement statement = databaseLink.createStatement();
-		        ResultSet result = statement.executeQuery(query);
-		        
-		        		    while (result.next()) {
-		        		        String UniversityData = "";
-		        		        for (int i = 1; i <= 4; i++) {
-		        		             UniversityData += result.getString(i) + ":";
-		        		         System.out.println(UniversityData);
-		        		        }
-		        		        }
-	        }
-	        catch (Exception e) {
-	            System.out.println("Connection Failed...");
-	        
-	        }
-		    return null;
-	    }
+	
+		
+		
 }
+
 
 

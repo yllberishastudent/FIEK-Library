@@ -16,7 +16,12 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/madY/Desktop/sources/mysql-connector-java-5.1.12/mysql-connector-java-5.1.12-bin.jar">
+	<classpathentry kind="lib" path="C:/Users/madY/Desktop/Java/mysql-connector-java-8.0.27.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/madY/Downloads/jfoenix-9.0.10.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>

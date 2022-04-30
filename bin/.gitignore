@@ -1,2 +1,5 @@
+/controllers/
 /repository/
-/database/
+/model/
+/views/
+/application/
