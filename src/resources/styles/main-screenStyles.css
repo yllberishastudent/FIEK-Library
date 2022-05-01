@@ -51,3 +51,19 @@
     -fx-background-color:black;
     -fx-text-fill: #FFFFFF;
     } 
+
+    /*Styling the add book window*/
+
+.addBookButtons{
+    -fx-background-color: #929FB9;
+    -fx-text-fill: white;
+    -fx-font-size:16;
+    -fx-border-weight: 5;
+    -fx-border-color: white;
+    }
+    
+    
+    .addBookButtons:hover {
+    -fx-background-color: #929FCC;
+    -fx-text-fill: white;
+    }
