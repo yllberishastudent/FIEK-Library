@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="386.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <TableView prefHeight="334.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+        <columns>
+            <TableColumn prefWidth="151.33331298828125" text="Student ID" />
+            <TableColumn prefWidth="151.33331298828125" text="Student Name" />
+            <TableColumn prefWidth="151.33331298828125" text="Mobile Number" />
+            <TableColumn prefWidth="151.33331298828125" text="E-Mail" />
+        </columns>
+         <contextMenu>
+            <ContextMenu>
+              <items>
+                  <MenuItem mnemonicParsing="false" text="Edit Student" />
+                  <MenuItem mnemonicParsing="false" text="Delete Student" />
+              </items>
+            </ContextMenu>
+         </contextMenu>
+      </TableView>
+   </top>
+   <center>
+      <VBox prefHeight="65.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="67.0" prefWidth="600.0">
+               <children>
+                  <Button defaultButton="true" mnemonicParsing="false" prefHeight="31.0" prefWidth="137.0" text="Add New" textFill="WHITE" />
+                  <Button defaultButton="true" mnemonicParsing="false" prefHeight="25.0" prefWidth="137.0" text="Refresh" textFill="WHITE" />
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
