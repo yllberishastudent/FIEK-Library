@@ -17,17 +17,17 @@
       <TextField layoutX="68.0" layoutY="222.0" prefHeight="25.0" prefWidth="301.0" />
       <TextField layoutX="68.0" layoutY="174.0" prefHeight="25.0" prefWidth="301.0" />
       <TextField layoutX="68.0" layoutY="123.0" prefHeight="25.0" prefWidth="301.0" />
-      <Label layoutX="68.0" layoutY="57.0" text="Book ID" textFill="#ff0088">
+      <Label layoutX="68.0" layoutY="57.0" text="Student ID" textFill="#ff0088">
          <font>
             <Font name="Calibri Bold" size="12.0" />
          </font>
       </Label>
-      <Label layoutX="67.0" layoutY="109.0" text="Book Title" textFill="#ff0088">
+      <Label layoutX="67.0" layoutY="109.0" text="Student Name" textFill="#ff0088">
          <font>
             <Font name="Calibri Bold" size="12.0" />
          </font>
       </Label>
-      <Label layoutX="68.0" layoutY="157.0" text="Book Author" textFill="#ff0088">
+      <Label layoutX="68.0" layoutY="157.0" text="Mobile Number" textFill="#ff0088">
          <font>
             <Font name="Calibri Bold" size="12.0" />
          </font>
@@ -77,18 +77,12 @@
             </Button>
          </children>
       </VBox>
-      <Label layoutX="68.0" layoutY="205.0" text="Publisher" textFill="#ff0088">
+      <Label layoutX="68.0" layoutY="205.0" text="E-Mail" textFill="#ff0088">
          <font>
             <Font name="Calibri Bold" size="12.0" />
          </font>
       </Label>
-      <Button defaultButton="true" layoutX="226.0" layoutY="324.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="121.0" text="Cancel" />
-      <Button defaultButton="true" layoutX="88.0" layoutY="324.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="121.0" text="Add" />
-      <TextField layoutX="68.0" layoutY="271.0" prefHeight="25.0" prefWidth="301.0" />
-      <Label layoutX="68.0" layoutY="257.0" text="Quantity" textFill="#ff0088">
-         <font>
-            <Font name="Calibri Bold" size="12.0" />
-         </font>
-      </Label>
+      <Button defaultButton="true" layoutX="230.0" layoutY="311.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="121.0" text="Cancel" />
+      <Button defaultButton="true" layoutX="86.0" layoutY="311.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="121.0" text="Add" />
    </children>
 </AnchorPane>
